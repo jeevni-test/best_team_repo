@@ -11,11 +11,12 @@
   </div>
 
   <ul class="list">
-    <ul class="mb-2"> <%= t('welcome.instructions.list.answer_questions') %> </ul>
-    <ul class="mb-2"> <%= t('welcome.instructions.list.submit_answers') %> </ul>
-    <ul class="mb-2"> <%= t('welcome.instructions.list.start_quiz') %> </ul>
+    <ul class="mb-2"><%= t('welcome.instructions.list.answer_questions') %></ul>
+    <ul class="mb-2"><%= t('welcome.instructions.list.submit_answers') %></ul>
+    <ul class="mb-2"><%= t('welcome.instructions.list.start_quiz') %></ul>
   </ul>
 
-    <p class="text-danger"><%= t('welcome.instructions.title', username: 'current_user.username').html_safe %></p>
+    <h1 class="text-danger"><%= t('welcome.instructions.title', username: 'current_user.username').html_safe %></h1>
 </div>
 
+http://127.0.0.1:3000/en/steps/17
