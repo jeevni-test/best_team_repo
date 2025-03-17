@@ -1,7 +1,9 @@
 <% provide(:title, 'Sign in') %>
-<div c="d-flex align-items-center justify-content-center mt-4">
+<div class="d-flex align-items-center justify-content-center mt-4">
   <div>
+     <br/>
     <h2 class="text-center"><%= t('forms.sign_in') %></h2>
+ 
     <%= link_to sign_up_path do %>
       <h5 class="text-center fw-semibold text-dark m-0"><%= t('sessions.create_an_account') %></h5>
     <% end %>
@@ -29,7 +31,7 @@
         </div>
 
         <div class="text-center">
-          <%= form.submit t('forms.sign_in'), class: "mt-5 w-75" %>
+          <%= form.submit t('forms.sign_in'), class: "btn btn-danger mt-5 w-75" %>
         </div>
 
       <% end %>
