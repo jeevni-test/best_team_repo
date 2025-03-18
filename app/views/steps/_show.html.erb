@@ -1,6 +1,6 @@
 <% provide(:title, "Page #{@quiz_form.current_step} of #{QuizConstantsHelper::NUMBER_OF_PAGES}") %>
 <div class="container w-75 mt-5 mb-4 pt-5">
-  <h2><%= @quiz_form.current_page_range %></h2>
+  <h2><%= "Page #{@quiz_form.current_step} of #{QuizConstantsHelper::NUMBER_OF_PAGES}" %></h2>
   <hr class="border border-danger w-100 border-2 my-2">
   <% question_index = 0 %>
 
