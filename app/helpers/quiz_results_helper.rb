@@ -47,7 +47,7 @@ module QuizResultsHelper
   def score_percentage(quiz_results)
     return 0 if TOTAL_QUESTIONS.zero?
 
-    (total_correct_answers(quiz_results).to_f / TOTAL_QUESTIONS * 100).round(2)
+    ((total_correct_answers(quiz_results).to_f / TOTAL_QUESTIONS) * 100).round(2)
   end
 
   # Checks if a user's answer matches the correct answer.
@@ -137,10 +137,8 @@ module QuizResultsHelper
   # - String indicating whether the user's answer was "Correct" or "Incorrect".
   #
   def evaluate_result(correct_answer, user_answer)
-    if correct_answer!= user_answer 
-      return 'Incorrect'
-    else return 'Correct'
-    end
+    check_answer(correct_answer, user_answer) ? 'Correct' : 'Incorrect' 
+      
   end
 
   # Generates table data (`<td>`) for question, correct answer, user's answer, and result.
