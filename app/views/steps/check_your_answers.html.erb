@@ -6,6 +6,15 @@
   <div class="border border-danger border-bottom-0 rounded overflow-hidden mt-4 w-100">
     <div class="table-responsive">
       <table class="table border-danger m-0">
+              <thead>
+                <tr>
+                  <th>Question Number</th>
+                  <th style="width: 50%">Question</th>
+                  <th>Answer</th>
+                  <th class="text-center" style="width: 20%">Change Answer</th>
+                </tr>
+              <thead/>
+
         <tbody class="table-group-divider border-danger">
           <% question_page_number = 0 %>
           <% @quiz_results.answer.each do |question, answers| %>
