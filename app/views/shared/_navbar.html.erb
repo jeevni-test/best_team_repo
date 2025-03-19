@@ -18,26 +18,21 @@
           <%= link_to t('forms.sign_out'), '#', class: 'text-white m-0 fw-normal', data: { bs_toggle: 'modal', bs_target: '#signoutModal' } %>
         </h5>
 
-        <h5 style="padding-left:20px" class = 'me-3 mb-0'>
+    
+
+        <h5 style = "padding-left:20px" class = 'me-3 mb-0'>
         <body class="<%= cookies[:theme] %>">
           <% cookies[:theme] %>
-          <%= link_to 'Lightmode', set_theme_path(theme: 'light'), class: 'text-white m-0 fw-normal' %>
+          <% if cookies[:theme] == 'dark' %>
+            <%= link_to image_tag("/assets/cartoon-moon-icon-png.webp", style:"width:36px"), set_theme_path(theme: 'light'), class: 'text-white m-0 fw-normal' "btn btn-danger" %>
+          <% else %>
+            <%= link_to image_tag("/assets/cartoon-moon-icon-png.webp", style:"width:36px"), set_theme_path(theme: 'dark'), class: 'text-white m-0 fw-normal' "btn btn-danger" %>
+          <% end %>
         </body>
+          
         </h5>
 
-        <h5 class = 'me-3 mb-0'>
-        <body class="<%= cookies[:theme] %>">
-          <% cookies[:theme] %>
-          <%= link_to 'Darkmode', set_theme_path(theme: 'dark'), class: 'text-white m-0 fw-normal' %>
-        </body>
-        </h5>
         
-        <h5 class = 'me-3 mb-0'>
-        <body class="<%= cookies[:theme] %>">
-          <% cookies[:theme] %>
-          <%= link_to 'System Default', set_theme_path, class: 'text-white m-0 fw-normal' %>
-        </body>
-        </h5>
 
 
       
