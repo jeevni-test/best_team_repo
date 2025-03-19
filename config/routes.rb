@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
     resource :user, only: %i[edit update]
 
+    # Theme controller routes
+    get 'set_theme', to: 'theme#update'
+
+
     # Steps controller routes
     resources :steps, only: %i[show update edit] do
       collection do
@@ -28,3 +32,5 @@ Rails.application.routes.draw do
   # Catch-all route for handling 404 Not Found
   match '*path', to: 'application#render_404', via: :all
 end
+
+
